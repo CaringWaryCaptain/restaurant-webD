@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve a Table – Masala & More</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="stylereservation.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html">Masala & More</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About & Staff</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservation.html">Reserve a Table</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="reservation-hero">
+    <div class="hero-text">
+      <h1>Reserve Your Table</h1>
+      <p>Experience authentic flavours & warm hospitality — book your table now.</p>
+    </div>
+  </section>
+
+  <section id="reservation-form">
+    <h2>Book a Table</h2>
+    <form action="submit_reservation.php" method="post">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email">
+
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Time</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="people">Number of Guests</label>
+      <select id="people" name="people" required>
+        <option value="1">1 Guest</option>
+        <option value="2">2 Guests</option>
+        <option value="3">3 Guests</option>
+        <option value="4">4 Guests</option>
+        <option value="5">5 Guests</option>
+        <option value="6">6 Guests</option>
+        <option value="7">7 Guests</option>
+        <option value="8+">8+ Guests</option>
+      </select>
+
+      <button type="submit">Reserve Now</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Address: [Your Address, Ghāziābād, Uttar Pradesh, India]</p>
+    <p>Phone: <a href="tel:[YourPhoneNumber]" style="color:#bbb; text-decoration:none;">[YourPhoneNumber]</a></p>
+    <div class="social">
+      <a href="#">Instagram</a> | <a href="#">Facebook</a>
+    </div>
+  </footer>
+
+</body>
+</html>

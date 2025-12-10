@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Masala & More</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html">Masala & More</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About & Staff</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservation.html">Reserve a Table</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <img src="images/pngtree-restaurant-cafe-interior-abstract-blur-background-image_15662088.jpg" alt="Restaurant interior">
+    <div class="hero-text">
+      <h1>Welcome to Masala & More</h1>
+      <p>Authentic flavours • Warm atmosphere</p>
+      <a href="order.html" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <section id="preview-dishes">
+    <h2>Featured Dishes</h2>
+    <div class="dish-grid">
+      <div class="dish">
+        <img src="images/premium_photo-1661419883163-bb4df1c10109.jpg" alt="Butter Chicken">
+        <h3>Butter Chicken</h3>
+        <p>Tender chicken in a rich, creamy tomato-butter sauce.</p>
+      </div>
+      <div class="dish">
+        <img src="images/paneer-tikka-masala.jpg" alt="Paneer Tikka Masala">
+        <h3>Paneer Tikka Masala</h3>
+        <p>Chargrilled paneer cubes in a spiced, creamy gravy.</p>
+      </div>
+      <div class="dish">
+        <img src="images/pngtree-wooden-plate-with-vegetable-biryani-png-image_14418164.png" alt="Vegetable Biryani">
+        <h3>Vegetable Biryani</h3>
+        <p>Fragrant basmati rice layered with mixed vegetables and saffron.</p>
+      </div>
+    </div>
+    <div class="btn-container">
+      <a href="menu.html" class="btn">View Full Menu</a>
+    </div>
+  </section>
+
+  <section id="about-snippet">
+    <h2>About Us</h2>
+    <p>From a humble kitchen in Ghāziābād, Masala & More was born out of a love for bold Indian flavours and warm hospitality. Our journey is rooted in tradition, yet open to innovation. We craft each dish with fresh ingredients, cherished recipes, and a welcoming ambiance for friends, families, and food lovers alike.</p>
+  </section>
+
+  <footer>
+    <p>Address: [Your Address, Ghāziābād, Uttar Pradesh, India]</p>
+    <p>Phone: <a href="tel:[YourPhoneNumber]">[YourPhoneNumber]</a></p>
+    <div class="social">
+      <a href="#">Instagram</a> | <a href="#">Facebook</a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const authLink = document.getElementById('authLink');
+      if (!authLink) {
+        console.warn('authLink not found');
+        return;
+      }
+
+      const loggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      if (loggedIn) {
+        authLink.textContent = 'Logout';
+        authLink.href = '#';
+        authLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('isLoggedIn');
+          window.location.href = 'Backend/login.html';
+        });
+      } else {
+        authLink.textContent = 'Login';
+        authLink.href = 'Backend/login.html';
+      }
+    });
+  </script>
+</body>
+</html>
